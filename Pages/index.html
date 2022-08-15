@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H0M3</title>
+  <link rel="stylesheet" href="/CSS/styleMain.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"/>
+  <link rel="stylesheet" href="Normalize.css"/>
+  <link rel="Shortcut icon" href="/images/NPOC variant1.jpg"/>
+ 
+</head>
+
+<body>
+  
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <img src="/images/logo.png" alt="White Rabbit logo image goes here!">
+      </div>
+     
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+      </div>
+    </div>
+  </nav>
+  <section class="hero">
+    <img src="/images/1.png" class="translateX" data-speed="0.50" id="moon" alt="">
+    <img src="/images/2.png" class="translateY" data-speed="0.35" id="clouds" alt="">
+    <img src="/images/3.png" class="translateY" data-speed="0.15" id="mount" alt="">
+    <h1 id="text" class="translateX" data-speed="-7">  "Follow the white rabbit"</h1>
+
+    <a href="/Pages/Blog.html" id="btn">Enter The Matrix</a>
+    <img src="/images/4.png" class="translateY" data-speed="0.50" id="base" alt="">
+  </section>
+
+  
+  <section id="about" class="section-padding">
+    <div class="container grid">
+      <div class="left-content">
+        <h4>What is The Matrix, you may ask.
+          Well if that is question that you want the answer to, I present you with a choice. 
+        </h4>
+      </div>
+      <div class="right-content">
+        <img src="/images/about-1.jpg" alt="The Matrix image quote goes here!">
+      </div>
+    </div>
+   
+    
+  </section>
+  <footer>
+    <div class="container">
+      <a href="https://thechoiceisyours.whatisthematrix.com/uk/"> 
+        <img src="/images/logo.png" alt="White rabbit footer image goes here!">
+      </a>
+    </div>
+  </footer>
+   <script>
+     const translateX = document.querySelectorAll(".translateX");
+const translateY = document.querySelectorAll(".translateY");
+window.addEventListener("scroll" ,() => {
+  let scroll = window.pageYOffset;
+  translateX.forEach(element => {
+    let speed = element.dataset.speed;
+    element.style.transform = `translateX(${scroll * speed}px)`;
+  })
+  translateY.forEach(element => {
+    let speed = element.dataset.speed;
+    element.style.transform = `translateY(${scroll * speed}px)`;
+  })
+})
+   </script>
+</body>
+</html>

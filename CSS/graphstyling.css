@@ -1,0 +1,10 @@
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: brown;
+        background-color: black;
+      }
+  
+      .rect:hover { opacity: 0.5; }
+    
+      
